@@ -11,7 +11,10 @@ def count_sit(num):
 
             if num not in visited:
                 visited.append(num)
-        current_sits[swaps[i][0]], current_sits[swaps[i][1]] = current_sits[swaps[i][1]], current_sits[swaps[i][0]]
+        current_sits[swaps[i][0]-1], current_sits[swaps[i][1]-1] = (
+            current_sits[swaps[i][1]-1],
+            current_sits[swaps[i][0]-1],
+        )
         i += 1
         if i == K:
             i = 0
