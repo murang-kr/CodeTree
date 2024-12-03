@@ -1,8 +1,8 @@
 def count_sit(num):
     visited = [num]
     first = num
-    count = 0
     i = 0
+    count = 0
     while True:
         if input_list[i][0] == num:
             if num not in visited:
@@ -21,12 +21,10 @@ def count_sit(num):
             i = 0
             count += 1
         
-        if (count >= K and first == num):
+        if count >= K:
             break
 
     return len(visited)
-
-
 
 N, K = map(int, input().split())
 input_list = []
