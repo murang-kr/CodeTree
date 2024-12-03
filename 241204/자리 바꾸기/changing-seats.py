@@ -1,36 +1,32 @@
 def count_sit(num):
+    current_sits = list(range(1, N+1))
     visited = [num]
-    first = num
     i = 0
-    count = 0
     while True:
-        if input_list[i][0] == num:
+        if num in swaps[i]:
+            if swaps[i][0] != num:
+                num = swaps[i][0]
+            else:
+                num = swaps[i][1]
+
             if num not in visited:
                 visited.append(num)
-            num = input_list[i][1]
-            
-
-        elif input_list[i][1] == num:
-            if num not in visited:
-                visited.append(num)
-            num = input_list[i][0]
-            
-
+        current_sits[swaps[i][0]], current_sits[swaps[i][1]] = current_sits[swaps[i][1]], current_sits[swaps[i][0]]
         i += 1
         if i == K:
             i = 0
-            count += 1
         
-        if count >= K:
+        if current_sits == sits:
             break
 
     return len(visited)
 
 N, K = map(int, input().split())
-input_list = []
+sits = list(range(1, N+1))
+swaps = []
 
 for i in range(K):
-    input_list.append(tuple(map(int, input().split())))
+    swaps.append(tuple(map(int, input().split())))
 
 for i in range(1, N+1):
     print(count_sit(i))
