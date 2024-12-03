@@ -21,7 +21,7 @@ def count_sit(num):
             i = 0
             count += 1
         
-        if (count >= 3 and first == num):
+        if (count >= K and first == num):
             break
 
     return len(visited)
@@ -29,7 +29,6 @@ def count_sit(num):
 
 
 N, K = map(int, input().split())
-result = range(1, N+1)
 input_list = []
 
 for i in range(K):
