@@ -3,4 +3,5 @@ if n >= 80:
     print("pass")
 
 else:
-    print(f"{80-a} more score")
+    temp = 80-a
+    print(f"{temp} more score")
