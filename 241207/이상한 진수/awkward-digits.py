@@ -1,5 +1,5 @@
-a = "1010"
-b = "212"
+a = input()
+b = input()
 
 possible_a = []
 for i in range(len(a)):
