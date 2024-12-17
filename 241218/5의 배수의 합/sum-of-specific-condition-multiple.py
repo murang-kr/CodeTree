@@ -2,7 +2,7 @@ a, b = map(int, input().split())
 sum_val = 0
 
 if a > b:
-    a = b, b = a
+    a, b = b, a
 
 for i in range(a, b+1):
     if i % 5 == 0:
