@@ -1,3 +1,3 @@
 n, m = map(int, input().split())
 arr = list(map(int, input().split()))
-print(arr.count(3))
+print(arr.count(m))
