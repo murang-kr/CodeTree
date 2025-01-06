@@ -2,10 +2,11 @@ n = int(input())
 a = list(map(int, input().split()))
 
 # Write your code here!
-first = a[0]
-second = a[0]
+import sys
+first = -sys.maxsize
+second = -sys.maxsize
 
-for num in a[1:]:
+for num in a:
     if num > first:
         first, second = num, first
     elif num > second:
