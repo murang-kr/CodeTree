@@ -25,7 +25,7 @@ elif o == "*":
     print(a, o, c, "=", end = " ")
     print(multiplication(a, c))
 
-elif o == "-":
+elif o == "/":
     print(a, o, c, "=", end = " ")
     print(division(a, c))
 
