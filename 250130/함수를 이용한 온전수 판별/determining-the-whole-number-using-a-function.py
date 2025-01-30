@@ -14,7 +14,7 @@ def is_onjeonsu(n):
 
 cnt = 0
 
-for i in range(a, b):
+for i in range(a, b+1):
     if is_onjeonsu(i):
         cnt += 1
 print(cnt)
