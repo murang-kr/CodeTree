@@ -15,7 +15,8 @@ def is_exist_day(y, m, d):
         else:
             if d <= 28:
                 return True
-
+        return False
+        
     if m in [1, 3, 5, 7, 8, 10, 12]:
         return True
     else:
