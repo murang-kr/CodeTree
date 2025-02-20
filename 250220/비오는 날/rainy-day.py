@@ -9,7 +9,7 @@ class Information:
 
 infor = []
 for i in range(n):
-    infor.append(Information(arr[i][0], arr[i][1], arr[i][3]))
+    infor.append(Information(arr[i][0], arr[i][1], arr[i][2]))
 
 answer = None
 for obj in infor:
