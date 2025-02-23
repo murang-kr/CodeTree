@@ -10,7 +10,7 @@ for _ in range(n):
 
 # Write your code here!
 students = []
-for i in range(5):
+for i in range(n):
     students.append((name[i], height[i], weight[i]))
 
 students.sort(key = lambda x: (x[1], -x[2]))
