@@ -12,10 +12,10 @@ for i in range(2):
         for k in range(b, d):
             grids[j][k] = i
 
-max_x = 0
-min_x = 2000
-max_y = 0
-min_y = 2000
+max_x = -1
+min_x = 9999
+max_y = -1
+min_y = 9999
 for i in range(x1[0]+OFFSET, x2[0]+OFFSET):
     for j in range(y1[0]+OFFSET, y2[0]+OFFSET):
         if grids[i][j] == 0:
@@ -25,6 +25,9 @@ for i in range(x1[0]+OFFSET, x2[0]+OFFSET):
             if i <= min_x and j <= min_y:
                 min_x, min_y = i, j
     
-max_x += 1
-max_y += 1
-print((max_x-min_x)*(max_y-min_y))
+if max_x == -1 and max_y == -1 and min_x == 9999 and min_y == 9999:
+    print(0)
+else:
+    max_x += 1
+    max_y += 1
+    print((max_x-min_x)*(max_y-min_y))
