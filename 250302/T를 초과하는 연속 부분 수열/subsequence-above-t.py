@@ -6,10 +6,9 @@ cnt = 0
 max_cnt = 0
 for i in range(len(arr)):
     if arr[i] <= t:
-        cnt = 0
         continue
-
-    if i == 0 or (arr[i] > arr[i-1] and arr[i-1] > t):
+        
+    if i == 0 or (arr[i] > t and arr[i-1] > t):
         cnt += 1
     else:
         cnt = 1
