@@ -32,6 +32,8 @@ for i in range(m):
         b_loc.append(b_loc[-1] + vec)
 
 for i in range(1, len(a_loc)):
+    if a_loc[i] == b_loc[i]: continue
+
     if a_loc[i] > b_loc[i]:
         if head != "A":
             cnt += 1
