@@ -22,7 +22,7 @@ for i in range(k-1):
 
 while True:
     if grid[x][y] == "/":
-        dir_num = int(dir_num + (-1 ** dir_num))
+        dir_num = int(dir_num + (-1) ** dir_num)
     else:
         dir_num = 3 - dir_num
     nx, ny = x + dxs[dir_num], y + dys[dir_num]
