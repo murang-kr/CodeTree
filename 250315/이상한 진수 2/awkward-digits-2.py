@@ -11,7 +11,7 @@ for i in range(len(a)):
 if flag:
     a[-1] = "0"
     a = "".join(a)
-    print(a)
+    print(int(a, 2))
 else:
     a = "".join(a)
     print(int(a, 2))
