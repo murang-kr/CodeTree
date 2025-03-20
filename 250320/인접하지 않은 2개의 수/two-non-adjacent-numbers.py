@@ -4,8 +4,8 @@ numbers = list(map(int, input().split()))
 # Please write your code here.
 sum_val = 0
 for i in range(n):
-    without_i = numbers[:i-1]+numbers[i+2:]
-    for j in without_i:
-        sum_val = max(numbers[i]+j, sum_val)
+    for j in range(n):
+        if abs(i-j) >= 2:
+            sum_val = max(sum_val, numbers[i]+numbers[j])
 
 print(sum_val)
