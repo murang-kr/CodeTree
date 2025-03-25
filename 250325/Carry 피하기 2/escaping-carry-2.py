@@ -11,7 +11,7 @@ def divider(n):
 
     return [ten_thousands, thousands, hundreds, tens, ones]
 
-max_val = 0
+max_val = -1
 for i in range(n-2):
     for j in range(i+1, n-1):
         for k in range(j+1, n):
