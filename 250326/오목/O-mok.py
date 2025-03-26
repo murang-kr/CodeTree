@@ -19,12 +19,14 @@ def check(x, y):
     if in_board(x, y+4) and in_board(x+4, y):
         if len(set([baduk, board[x+1][y+1], board[x+2][y+2], board[x+3][y+3], board[x+4][y+4]])) == 1:
             return x+2, y+2
+            
     if in_board(x, y-4) and in_board(x-4, y):
         if len(set([baduk, board[x-1][y-1], board[x-2][y-2], board[x-3][y-3], board[x-4][y-4]])) == 1:
             return x-2, y-2
     return -1, -1
 
 flag = True
+found = False
 for i in range(19):
     for j in range(19):
         if board[i][j] != 0:
@@ -33,7 +35,9 @@ for i in range(19):
                 print(board[i][j])
                 print(x+1, y+1)
                 flag = False
+                found = True
                 break
+    if found: break
 
 if flag:
     print(0)
