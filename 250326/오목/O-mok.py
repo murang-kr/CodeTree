@@ -33,6 +33,7 @@ for i in range(19):
                 print(board[i][j])
                 print(x+1, y+1)
                 flag = False
+                break
 
 if flag:
     print(0)
