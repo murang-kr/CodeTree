@@ -8,7 +8,7 @@ for _ in range(n):
 
 # Please write your code here.
 max_score = 0
-arr = [0]*max(x)
+arr = [0]*10000
 for i in range(n):
     arr[x[i]-1] = c[i]
 
