@@ -5,7 +5,7 @@ B = list(map(int, input().split()))
 # Please write your code here.
 cnt = 0
 for i in range(N-M+1):
-    sliced_nums = A[i:i+3]
+    sliced_nums = A[i:i+M]
     if sorted(sliced_nums) == sorted(B):
         cnt += 1
 
