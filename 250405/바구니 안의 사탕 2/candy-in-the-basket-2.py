@@ -7,7 +7,7 @@ max_candy = 0
 for c, p in arr:
     candy[p-1] += c
 
-for i in range(K, 100-K):
+for i in range(100):
     temp = candy[i-K:i+K+1]
     max_candy = max(max_candy, sum(temp))
 
