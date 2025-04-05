@@ -5,7 +5,7 @@ candy = [0] * 100
 # Please write your code here.
 max_candy = 0
 for c, p in arr:
-    candy[p-1] = c
+    candy[p-1] += c
 
 for i in range(K, 100-K):
     temp = candy[i-K:i+K+1]
