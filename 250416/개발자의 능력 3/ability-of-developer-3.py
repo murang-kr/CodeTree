@@ -7,7 +7,7 @@ def get_diff(i, j, k):
     return abs(sum1 - sum2)
 
 
-min_diff = 100
+min_diff = 10000000
 for i in range(0, 6):
     for j in range(i + 1, 6):
         for k in range(j+1, 6):
